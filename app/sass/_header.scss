@@ -1,0 +1,24 @@
+.header {
+  height: 5.5rem;
+  background: $colorPrimary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    a {
+      color: $white;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+    }
+  }
+  &__search-box {
+    input {
+      width: 35.6rem;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      background: $veryLightGray;
+      font-size: $font-sm;
+    }
+  }
+}

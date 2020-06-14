@@ -1,0 +1,16 @@
+.header {
+  grid-row: 1/2;
+  grid-column: 2/-1;
+  background-color: $white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
+  &__logo {
+    color: $purple;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

@@ -1,0 +1,20 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: $veryLightPink;
+  flex: 6;
+  padding: 0 1rem;
+  &__header {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4.5rem;
+      h1{
+          font-size: $font-md;
+          color:$darkBlue;
+      }
+  }
+}
