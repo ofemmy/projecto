@@ -27,8 +27,8 @@ body {
   -ms-grid-columns: 9rem minmax(5rem, 1fr) minmax(min-content, 125rem) minmax(5rem, 1fr);
       grid-template-columns: 9rem minmax(5rem, 1fr) minmax(-webkit-min-content, 125rem) minmax(5rem, 1fr);
       grid-template-columns: 9rem minmax(5rem, 1fr) minmax(min-content, 125rem) minmax(5rem, 1fr);
-  -ms-grid-rows: 50px 90px 1fr;
-      grid-template-rows: 50px 90px 1fr;
+  -ms-grid-rows: 70px 90px 1fr;
+      grid-template-rows: 70px 90px 1fr;
 }
 
 a,
@@ -54,9 +54,9 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -72,12 +72,28 @@ a:hover {
   letter-spacing: 2px;
 }
 
+.header img {
+  width: 90px;
+  height: 90px;
+}
+
 .sidebar {
   background-color: #411a37;
   grid-row: 1/-1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar img {
+  width: 90px;
+  height: 90px;
 }
 
 .filterbox {
@@ -142,6 +158,7 @@ a:hover {
   position: relative;
   margin-left: 3rem;
   width: 30%;
+  border-radius: 5px;
 }
 
 .search-box input {
@@ -149,7 +166,6 @@ a:hover {
   padding: 1rem;
   width: 85%;
   outline: none;
-  border-radius: 5px;
   border: none;
 }
 
@@ -390,10 +406,22 @@ a:hover {
 }
 
 .badge {
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
   background-color: #ECEFF3;
-  display: inline-block;
   border-radius: 3px;
+}
+
+.badge p {
+  margin-left: 0.5rem;
 }
 
 .menu-dots {

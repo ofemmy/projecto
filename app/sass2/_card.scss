@@ -67,11 +67,15 @@
   }
 }
 .badge {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
   background-color: $bodyColor;
-  //margin-top: 15px;
-  display: inline-block;
   border-radius: 3px;
+  p{
+    margin-left: 0.5rem;
+  }
 }
 
 .menu-dots {
