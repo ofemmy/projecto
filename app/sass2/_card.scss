@@ -11,13 +11,7 @@
     padding: 2rem;
     position: relative;
     //border: 1px solid $gray;
-    .ball {
-        margin-bottom: .8rem;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: red;
-      }
+    
 
     &--title {
       color: #222831;
@@ -84,7 +78,7 @@
   cursor: pointer;
   position: absolute;
   right: 2rem;
-  top: 1rem;
+  top: 0.7rem;
   //border: 1px solid red;
   padding: 1rem 0.8rem;
   .circle {

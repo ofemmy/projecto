@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/1a77e76b10.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/dist/css/style2.css" />
   </head>
   <body>
@@ -16,7 +20,35 @@
     </header>
     <section class="sidebar"></section>
     <section class="filterbox">
-      FILTER BOX
+      <div class="status-bar">
+        <div class="active">
+          <div class="ball active__ball"></div>
+          <p class="test">Active</p>
+        </div>
+        <div class="overdue">
+          <div class="ball overdue__ball"></div>
+          <p>Overdue</p>
+        </div>
+        <div class="completed">
+          <div class="ball completed__ball"></div>
+          <p>Completed</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <select name="filter" aria-placeholder="Sort by" class="select-css">
+          <option value="">Sort By</option>
+          <option value="priority">Priority</option>
+          <option value="remainingDays">Days Remaining</option>
+          <option value="status">Completion Status</option>
+          <option value="creationDate">Creation Date</option>
+        </select>
+        <div class="search-box">
+          <input type="text" placeholder="Search Project" />
+          <a href="#" class="search">
+            <i class="fas fa-search fa-2x search__icon"></i>
+          </a>
+        </div>
+      </div>
     </section>
     <section class="main">
       <div class="card">
@@ -48,7 +80,10 @@
           </div>
           <div class="card__footer--action">
             <a href="#" class="btn btn-sm btn-full"> View Details</a>
-            <p class="badge">3 days left</p>
+            <div class="badge">
+              <i class="far fa-clock"></i>
+              <p>3 days left</p>
+            </div>
           </div>
         </div>
       </div>
@@ -250,7 +285,6 @@
           </div>
         </div>
       </div>
-      
     </section>
   </body>
 </html>
