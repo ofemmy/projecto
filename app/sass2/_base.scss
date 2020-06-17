@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.3;
-  color: $grayishBlue;
+  color: $sideBarColor;
   font-family: "Nunito", sans-serif;
   height: 100vh;
   background: $bodyColor;
@@ -35,6 +35,6 @@ a:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: red;
+  //background-color: red;
   //display: inline-block;
 }
