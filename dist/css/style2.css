@@ -1,14 +1,16 @@
 .is-active {
-  background: orange;
+  border-bottom: 3px solid orange;
   color: #222831;
 }
 
 .is-overdue {
-  background: red;
+  border-bottom: 3px solid red;
+  color: #222831;
 }
 
 .is-completed {
-  background: green;
+  border-bottom: 3px solid green;
+  color: #222831;
 }
 
 html {
@@ -78,7 +80,7 @@ a:hover {
 }
 
 .header__logo {
-  color: #411a37;
+  color: #562349;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -90,7 +92,7 @@ a:hover {
 }
 
 .sidebar {
-  background-color: #411a37;
+  background-color: #562349;
   grid-row: 1/-1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -186,15 +188,15 @@ a:hover {
   top: 20%;
   right: 2%;
   height: 100%;
-  color: #411a37;
+  color: #562349;
 }
 
 .search__icon {
-  color: #411a37;
+  color: #562349;
 }
 
 .search__icon:hover {
-  color: #c265aa;
+  color: #c97cb6;
 }
 
 .wrapper {
@@ -312,12 +314,12 @@ a:hover {
 }
 
 .btn-full {
-  background: #411a37;
+  background: #562349;
   color: #fff;
 }
 
 .btn:hover {
-  background: #652956;
+  background: #fee2b3;
   -webkit-box-shadow: 0px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
 }
@@ -333,7 +335,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  background-color: #eceff3;
+  background-color: #fee2b3;
   border-radius: 3px;
 }
 
@@ -353,11 +355,12 @@ a:hover {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .card__header {
   padding: 0 25px;
-  min-height: 60px;
+  min-height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,7 +372,6 @@ a:hover {
 
 .card__header h2 {
   font-size: 1.9rem;
-  color: #fff;
 }
 
 .card__header .menu-dots {
@@ -399,16 +401,12 @@ a:hover {
   padding: 10px 20px;
 }
 
-.card__body .info {
-  text-align: right;
-}
-
 .card__body .info__first {
   margin: 2rem 0 1rem 0;
 }
 
 .card__body .info p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .card__body .info p span {
@@ -480,10 +478,11 @@ a:hover {
 }
 
 .text {
-  background-color: #eee;
+  background-color: #f3f3f3;
   padding: 5px;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 1px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .main {

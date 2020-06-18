@@ -3,13 +3,12 @@
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  background-color: $bodyColor;
+  background-color: $purpleLight;
   border-radius: 3px;
   p {
     margin-left: 0.5rem;
   }
 }
-
 
 .card {
   background-color: $white;
@@ -17,23 +16,23 @@
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  overflow: hidden;
   &__header {
     padding: 0 25px;
     // border-bottom: 1px solid lighten($color: $purple, $amount: 20%);
-    min-height: 60px;
+    min-height: 7rem;
     display: flex;
     align-items: center;
     position: relative;
     // background: lighten($color: $purple, $amount:15%);
     h2 {
       font-size: 1.9rem;
-      color: $white;
     }
-    .menu-dots{
+    .menu-dots {
       position: absolute;
       right: 7px;
       top: 7px;
-      >span{
+      > span {
         display: inline-block;
         width: 5px;
         height: 5px;
@@ -48,12 +47,12 @@
     align-items: center;
     padding: 10px 20px;
     .info {
-      text-align: right;
+      // text-align: right;
       &__first {
         margin: 2rem 0 1rem 0;
       }
       p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         span {
           font-weight: 700;
         }
@@ -111,8 +110,9 @@
   transform-origin: 50% 50%;
 }
 .text {
-  background-color: #eee;
+  background-color: #f3f3f3;
   padding: 5px;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 1px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }

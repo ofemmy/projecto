@@ -7,7 +7,8 @@ $black: rgb(0, 0, 0);
 $sideBarColor: #222831;
 //$sideBarColor: #393e46;
 $purple: #411a37;
-$purpleLight: #3f2438c5;
+$purple: #562349;
+$purpleLight: #fee2b3;
 $bodyColor: #eceff3;
 
 //Font Sizes
@@ -18,19 +19,21 @@ $font-md: 1.8rem; //18px
 $sideBarWidth: 12rem;
 
 //ctx
-$active:orange;
+$active: orange;
 $overdue: red;
 $completed: green;
 
 .is {
   &-active {
-    background: $active;
+    border-bottom: 3px solid $active;
     color: $sideBarColor;
   }
   &-overdue {
-    background: $overdue;
+    border-bottom: 3px solid $overdue;
+    color: $sideBarColor;
   }
   &-completed {
-    background: $completed;
+    border-bottom: 3px solid $completed;
+    color: $sideBarColor;
   }
 }
