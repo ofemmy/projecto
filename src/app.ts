@@ -1,5 +1,6 @@
 import { Status } from "./Status.enum";
-import {Project} from "./Project";
+import { Project } from "./Project";
+import { UIHandler } from "./UIHandler";
 let projects: Array<Project> = [
   {
     title: "Interconnection of Battery source to AC",
@@ -30,17 +31,25 @@ let projects: Array<Project> = [
     percent: 65,
   },
   {
-    title: "Setup Youtube Channel",
+    title: "Record New Podcast Episode",
     description:
       "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
     status: Status.Completed,
-    percent: 20,
+    percent: 30,
   },
   {
-    title: "Setup Youtube Channel",
+    title: "Update FaceTime App",
     description:
       "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
     status: Status.Completed,
-    percent: 10,
+    percent: 60,
   },
 ];
+projects.forEach((proj) => {
+  let card = UIHandler.createCard(proj);
+  UIHandler.updateProgressBar(card, proj.percent);
+  let mainHook = document.querySelector(".main");
+  if (mainHook) {
+    UIHandler.mountWidget(card, mainHook);
+  }
+});
