@@ -38,12 +38,13 @@
         </div>
       </div>
       <div class="wrapper">
-        <select name="filter" aria-placeholder="Sort by" class="select-css">
-          <option value="">Sort By</option>
-          <option value="priority">Priority</option>
+        <select name="filter" aria-placeholder="Sort by" class="select-box">
+          <option value="" disabled selected>Sort Projects By....</option>
+          <!-- <option value="priority">Priority</option> -->
           <option value="remainingDays">Days Remaining</option>
-          <option value="status">Completion Status</option>
+          <option value="completionStatus">Completion Status</option>
           <option value="creationDate">Creation Date</option>
+          <option value="deadlineDate">Deadline Date</option>
         </select>
         <div class="search-box">
           <input type="text" placeholder="Search Project" />
@@ -53,66 +54,65 @@
         </div>
       </div>
     </section>
-    <section class="main">
-      <template id="card-template">
-        <div class="card">
-          <div class="card__header">
-            <h2>New Project Title</h2>
-            <div class="menu-dots">
-              <span class="circle one"></span>
-              <span class="circle two"></span>
-              <span class="circle three"></span>
-            </div>
-          </div>
-          <div class="card__body">
-            <div class="info">
-              <div class="info__first">
-                <p class="text">Start Date: <span>22 JUN 2020</span></p>
-              </div>
-              <div>
-                <p class="text">Deadline: <span>22 AUG 2020</span></p>
-              </div>
-            </div>
-            <div class="progress-container" data-pct="0">
-              <svg class="progressbar" viewbox="0 0 64 64">
-                <circle
-                  class="progressbar__track"
-                  cx="50%"
-                  cy="50%"
-                  r="20"
-                  stroke-dasharray="125.66"
-                  stroke-dashoffset="0"
-                ></circle>
-                <circle
-                  class="progressbar__thumb"
-                  cx="50%"
-                  cy="50%"
-                  r="20"
-                  stroke-dasharray="125.66"
-                  stroke-dashoffset="125.66"
-                ></circle>
-              </svg>
-            </div>
-          </div>
-          <div class="card__content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              reprehenderit fugit distinctio dolores, veniam, recusandae
-              blanditiis quod explicabo cupiditate voluptatem delectus! Nam
-              provident reiciendis, dolorem quasi similique unde molestias
-              deleniti?
-            </p>
-          </div>
-          <div class="card__footer">
-            <a href="#" class="btn btn-sm btn-full">View Details</a>
-            <div class="badge">
-              <i class="far fa-clock"></i>
-              <p class="daysRemain">3 days left</p>
-            </div>
+    <section class="main"></section>
+    <template id="card-template">
+      <div class="card">
+        <div class="card__header">
+          <h2>New Project Title</h2>
+          <div class="menu-dots">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+            <span class="circle three"></span>
           </div>
         </div>
-      </template>
-    </section>
+        <div class="card__body">
+          <div class="info">
+            <div class="info__first">
+              <p class="text">Start Date: <span>22 JUN 2020</span></p>
+            </div>
+            <div>
+              <p class="text">Deadline: <span>22 AUG 2020</span></p>
+            </div>
+          </div>
+          <div class="progress-container" data-pct="0">
+            <svg class="progressbar" viewbox="0 0 64 64">
+              <circle
+                class="progressbar__track"
+                cx="50%"
+                cy="50%"
+                r="20"
+                stroke-dasharray="125.66"
+                stroke-dashoffset="0"
+              ></circle>
+              <circle
+                class="progressbar__thumb"
+                cx="50%"
+                cy="50%"
+                r="20"
+                stroke-dasharray="125.66"
+                stroke-dashoffset="125.66"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="card__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            reprehenderit fugit distinctio dolores, veniam, recusandae
+            blanditiis quod explicabo cupiditate voluptatem delectus! Nam
+            provident reiciendis, dolorem quasi similique unde molestias
+            deleniti?
+          </p>
+        </div>
+        <div class="card__footer">
+          <a href="#" class="btn btn-sm btn-full">View Details</a>
+          <div class="badge">
+            <i class="far fa-clock"></i>
+            <p class="daysRemain">3 days left</p>
+          </div>
+        </div>
+      </div>
+    </template>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- <script src="./app/js/projects.js"></script>
     <script src="./app/js/projectHandler.js"></script>

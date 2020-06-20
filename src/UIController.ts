@@ -1,6 +1,6 @@
 import { Status } from "./Status.enum";
 import { Project } from "./Project";
-export let UIHandler = {
+export let UIController = {
   createCard(proj: Project) {
     const cardTemplate = document.querySelector(
       "#card-template"
@@ -10,6 +10,7 @@ export let UIHandler = {
     header.querySelector("h2")!.textContent = proj.title;
     header.classList.add(`is-${Status[proj.status]}`);
     card.querySelector(".card__content")!.textContent = proj.description;
+    this.updateProgressBar(card, proj.percent);
     return card;
   },
   updateProgressBar(DOMEl: DocumentFragment | HTMLElement, val: number) {
@@ -27,7 +28,8 @@ export let UIHandler = {
   },
   mountWidget(
     DOMEl: HTMLElement | DocumentFragment,
-    $where: Element | DocumentFragment
+    $where: HTMLElement,
+    // options: { update: Boolean } = { update: false }
   ) {
     $where.append(DOMEl);
   },

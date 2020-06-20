@@ -1,55 +1,33 @@
-import { Status } from "./Status.enum";
-import { Project } from "./Project";
-import { UIHandler } from "./UIHandler";
-let projects: Array<Project> = [
-  {
-    title: "Interconnection of Battery source to AC",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-    status: Status.Active,
-    percent: 45,
-  },
-  {
-    title: "Establishment of Trust Fund",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur consectetur adipisicing elit",
-    status: Status.Overdue,
-    percent: 80,
-  },
-  {
-    title: "Setup Youtube Channel",
-    description:
-      "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-    status: Status.Completed,
-    percent: 75,
-  },
-  {
-    title: "Setup Youtube Channel",
-    description:
-      "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-    status: Status.Active,
-    percent: 65,
-  },
-  {
-    title: "Record New Podcast Episode",
-    description:
-      "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-    status: Status.Completed,
-    percent: 30,
-  },
-  {
-    title: "Update FaceTime App",
-    description:
-      "amet consectetur adipisicing elit. Inventore similique minima voluptatem id suscipit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-    status: Status.Completed,
-    percent: 60,
-  },
-];
-projects.forEach((proj) => {
-  let card = UIHandler.createCard(proj);
-  UIHandler.updateProgressBar(card, proj.percent);
-  let mainHook = document.querySelector(".main");
-  if (mainHook) {
-    UIHandler.mountWidget(card, mainHook);
-  }
-});
+import { UIController } from "./UIController";
+import { AppController } from "./AppController";
+AppController.registerListeners();
+AppController.init();
+// projects.forEach((proj) => {
+//   let card = UIController.createCard(proj);
+//   // UIController.updateProgressBar(card, proj.percent);
+//   let mainHook = document.querySelector(".main");
+//   if (mainHook) {
+//     UIController.mountWidget(card, <HTMLElement>mainHook);
+//   }
+// });
+
+//test select box eventlistener
+// const selectBox = document?.querySelector(".select-css");
+// if (selectBox) {
+//   selectBox.addEventListener("change", function (e) {
+//     if (e) {
+//       let filter = (<HTMLInputElement>e.target).value;
+//       let sortedProjs = projects.sort(
+//         (project1, project2) => project1.percent - project2.percent
+//       );
+//       console.log(sortedProjs);
+//       let mainHook = document.querySelector(".main") as HTMLElement;
+//       if (mainHook) {
+//         sortedProjs.forEach((proj) => {
+//           let card = UIController.createCard(proj);
+//           UIController.mountWidget(card, mainHook);
+//         });
+//       }
+//     }
+//   });
+// }
