@@ -6,7 +6,8 @@ export const AppController = {
   projectList: projects,
   init() {
     //create cards from the projects array and mount them on DOM
-    this.mountCards({projects:this.projectList,refresh:false});
+    this.registerListeners();
+    this.mountCards({ projects: this.projectList, refresh: false });
     //register all event listeners
   },
   registerListeners() {

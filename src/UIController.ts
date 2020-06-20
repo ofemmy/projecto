@@ -1,3 +1,4 @@
+import moment from "moment";
 import { Status } from "./Status.enum";
 import { Project } from "./Project";
 export let UIController = {
@@ -10,6 +11,19 @@ export let UIController = {
     header.querySelector("h2")!.textContent = proj.title;
     header.classList.add(`is-${Status[proj.status]}`);
     card.querySelector(".card__content")!.textContent = proj.description;
+    card.querySelector(".start-date")!.textContent =
+      proj.startDate
+    .format("Do MMM YYYY");
+    card.querySelector(".end-date")!.textContent = proj.endDate.format(
+      "Do MMM YYYY"
+    );
+    card.querySelector(".daysRemain")!.textContent = 
+      proj.endDate
+    .fromNow();
+    let badge = card.querySelector(".badge") as HTMLDivElement;
+    if (proj.endDate.isBefore()) {
+      badge.classList.add("overdue");
+    }
     this.updateProgressBar(card, proj.percent);
     return card;
   },
@@ -28,7 +42,7 @@ export let UIController = {
   },
   mountWidget(
     DOMEl: HTMLElement | DocumentFragment,
-    $where: HTMLElement,
+    $where: HTMLElement
     // options: { update: Boolean } = { update: false }
   ) {
     $where.append(DOMEl);
