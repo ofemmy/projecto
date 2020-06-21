@@ -60,6 +60,7 @@ a:hover {
 }
 
 .header {
+  position: relative;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -91,6 +92,11 @@ a:hover {
   height: 90px;
 }
 
+.header__cta {
+  position: absolute;
+  right: 30px;
+}
+
 .sidebar {
   background-color: #411a37;
   grid-row: 1/-1;
@@ -108,6 +114,22 @@ a:hover {
 .sidebar img {
   width: 90px;
   height: 90px;
+}
+
+.sidebar .wrap-content {
+  margin: 20rem;
+}
+
+.sidebar .wrap-content .add-project {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1.2rem;
+}
+
+.sidebar .wrap-content .add-project:hover {
+  background: #fff;
+  color: #411a37;
 }
 
 .filterbox {

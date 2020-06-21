@@ -1,0 +1,24 @@
+.sidebar {
+  background-color: $purple;
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 90px;
+    height: 90px;
+  }
+  .wrap-content {
+    margin: 20rem;
+    .add-project {
+      text-decoration: none;
+      color: $white;
+      font-size: 2.5rem;
+      padding: 1.2rem;
+      &:hover {
+        background: $white;
+        color: $purple;
+      }
+    }
+  }
+}

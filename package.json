@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ofemmy/projecto#readme",
   "dependencies": {
+    "@editorjs/editorjs": "^2.18.0",
     "D": "^1.0.0",
     "moment": "^2.27.0",
     "ts-loader": "^7.0.5",

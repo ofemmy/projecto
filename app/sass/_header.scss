@@ -1,24 +1,25 @@
 .header {
-  height: 5.5rem;
-  background: $colorPrimary;
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 2/-1;
+  background-color: $white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 1rem;
+  box-shadow: 0px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
   &__logo {
-    a {
-      color: $white;
-      font-weight: 700;
-      letter-spacing: 1.3px;
-    }
+    color: $purple;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-  &__search-box {
-    input {
-      width: 35.6rem;
-      border-radius: 10px;
-      outline: none;
-      border: none;
-      background: $veryLightGray;
-      font-size: $font-sm;
-    }
+  img {
+    width: 90px;
+    height: 90px;
+  }
+  &__cta {
+    position: absolute;
+    right: 30px;
   }
 }

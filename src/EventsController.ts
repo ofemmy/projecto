@@ -1,4 +1,3 @@
-import { Project } from "./Project";
 import { SelectChoice } from "./SelectChoice.enum";
 import { AppController } from "./AppController";
 

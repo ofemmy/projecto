@@ -1,17 +1,40 @@
-//Colors
-$darkBlue: hsl(233, 26%, 24%);
-$limeGreen: hsl(136, 65%, 51%);
-$brightCyan: hsl(192, 70%, 51%);
+$gray: #eee;
 $grayishBlue: hsl(233, 8%, 62%);
 $lightGrayishBlue: hsl(220, 16%, 96%);
-$veryLightGray: hsl(0, 0%, 98%);
-$white: hsl(0, 0%, 100%);
-$black:rgb(0,0,0);
-$gray:#eee;
-$veryLightPink:hsla(323, 100%, 50%, 0.034);
-
-$colorPrimary:linear-gradient(hsla(340, 100%, 50%, 0.767),hsla(323, 100%, 50%, 0.836));
+$veryLightGray: hsl(0, 0%, 95%);
+$white: #fff;
+$black: rgb(0, 0, 0);
+$sideBarColor: #222831;
+$sideBarColor: #333;
+//$sideBarColor: #393e46;
+$purple: #411a37;
+//$purple: #0065ff;
+$purpleLight: #fee2b3;
+$bodyColor: #eceff3;
 
 //Font Sizes
 $font-sm: 1.4rem; //14px
 $font-md: 1.8rem; //18px
+
+//Width
+$sideBarWidth: 12rem;
+
+//ctx
+$active: orange;
+$overdue: red;
+$completed: green;
+
+.is {
+  &-Active {
+    border-bottom: 3px solid $active;
+    color: $sideBarColor;
+  }
+  &-Overdue {
+    border-bottom: 3px solid $overdue;
+    color: $sideBarColor;
+  }
+  &-Completed {
+    border-bottom: 3px solid $completed;
+    color: $sideBarColor;
+  }
+}
