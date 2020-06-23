@@ -7,10 +7,6 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Add New Project</title>
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,900&display=swap"
-      rel="stylesheet"
-    /> -->
     <script
       src="https://kit.fontawesome.com/1a77e76b10.js"
       crossorigin="anonymous"
@@ -21,7 +17,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="form.css" />
+    <!-- <link rel="stylesheet" href="form.css" /> -->
   </head>
   <body>
     <nav
@@ -49,11 +45,7 @@
           </div>
           <div class="form-group">
             <label for="description">Description</label>
-            <textarea
-              class="form-control"
-              id="description "
-              rows="3"
-            ></textarea>
+            <textarea class="form-control" id="description" rows="3"></textarea>
           </div>
           <!-- <div class="form-group">
             <label for="editorjs">Project Tasks</label>
@@ -80,7 +72,27 @@
               />
               <div class="myCal2"></div>
             </div>
-            <button type="submit" class="btn btn-primary">
+          </div>
+          <div class="form-group taskDiv">
+            <label>Project Tasks:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Task 1"
+              id="task1"
+            />
+            <input
+              type="text"
+              class="form-control mt-2"
+              placeholder="Task 2"
+              id="task2"
+            />
+          </div>
+          <button class="btn btn-outline-secondary btn-sm addTask">
+            Add More Tasks
+          </button>
+          <div class="form-row">
+            <button type="submit" class="btn btn-primary mt-5">
               Create Project
             </button>
           </div>
@@ -104,7 +116,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="./src/Calendar.js"></script>
-    <script type="module" src="./src/editor.js"></script>
+    <!-- <script src="./src/Calendar.js"></script>
+    <script type="module" src="./src/form.js"></script> -->
   </body>
 </html>

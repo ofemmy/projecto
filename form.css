@@ -101,6 +101,7 @@
 
 .myCal1,
 .myCal2 {
+  z-index: 2000;
   width: 322px;
   height: 322px;
   border-radius: 5px;
