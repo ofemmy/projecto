@@ -25,6 +25,9 @@ body {
     );
   grid-template-rows: 70px 90px 1fr;
 }
+:root {
+  --col: 0;
+}
 a,
 a:visited,
 a:hover {

@@ -1,16 +1,24 @@
-import { Calender } from "./Calendar";
-import "../sass/addForm.scss";
+import { Calender } from "./Calender";
+import "../sass/calender.scss";
 let startDateInput = document.querySelector("#startDate") as HTMLElement;
 let endDateInput = document.querySelector("#endDate") as HTMLElement;
-let startHost = document.querySelector(".myCal1") as HTMLElement;
-let endHost = document.querySelector(".myCal2") as HTMLElement;
-new Calender({
-  hookEl: startDateInput,
-  eventType: "click",
-  hostEl: startHost,
-});
-new Calender({ hookEl: endDateInput, eventType: "click", hostEl: endHost });
 
+let startCal = new Calender({
+  hookId: "cal1",
+  hostId: "startDate",
+});
+let endCal = new Calender({
+  hookId: "cal2",
+  hostId: "endDate",
+});
+function showCal(e: Event, calender: Calender) {
+  e.preventDefault();
+  calender.show();
+}
+startDateInput.addEventListener("click", (e) => showCal(e, startCal));
+endDateInput.addEventListener("click", (e) => showCal(e, endCal));
+
+//Add New Task
 let addTaskBtn = document.querySelector(".addTask") as HTMLButtonElement;
 let taskDiv = document.querySelector(".taskDiv") as HTMLElement;
 addTaskBtn.addEventListener("click", function (e) {
